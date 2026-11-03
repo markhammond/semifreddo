@@ -1,0 +1,777 @@
+#nullable enable
+Semifreddo.Adjacency<N>
+Semifreddo.Adjacency<N>.Adjacency() -> void
+Semifreddo.Adjacency<N>.Adjacency(System.Collections.Generic.IReadOnlyCollection<N>! neighbours) -> void
+Semifreddo.Adjacency<N>.Adjacency(System.ReadOnlySpan<N> neighbours) -> void
+Semifreddo.Adjacency<N>.Count.get -> int
+Semifreddo.Adjacency<N>.Enumerator
+Semifreddo.Adjacency<N>.Enumerator.Current.get -> N
+Semifreddo.Adjacency<N>.Enumerator.Enumerator() -> void
+Semifreddo.Adjacency<N>.Enumerator.MoveNext() -> bool
+Semifreddo.Adjacency<N>.GetEnumerator() -> Semifreddo.Adjacency<N>.Enumerator
+Semifreddo.Adjacency<N>.IsEmpty.get -> bool
+Semifreddo.DagBatchOptions
+Semifreddo.DagBatchOptions.DagBatchOptions() -> void
+Semifreddo.DagBatchOptions.Equals(Semifreddo.DagBatchOptions other) -> bool
+Semifreddo.DagBatchOptions.SkipChangeLog.get -> bool
+Semifreddo.DagBatchOptions.SkipChangeLog.init -> void
+Semifreddo.DagBatchOptions.SkipCycleCheck.get -> bool
+Semifreddo.DagBatchOptions.SkipCycleCheck.init -> void
+Semifreddo.DagCycleException<N>
+Semifreddo.DagCycleException<N>.Cycle.get -> N[]!
+Semifreddo.DagCycleException<N>.DagCycleException(N[]! cycle) -> void
+Semifreddo.DagNodeView<N, A, V>
+Semifreddo.DagNodeView<N, A, V>.AlternateKey.get -> A
+Semifreddo.DagNodeView<N, A, V>.AlternateKey.init -> void
+Semifreddo.DagNodeView<N, A, V>.DagNodeView() -> void
+Semifreddo.DagNodeView<N, A, V>.DagNodeView(N Id, A AlternateKey, V Value, Semifreddo.EdgeSet<N> Successors, Semifreddo.EdgeSet<N> Predecessors) -> void
+Semifreddo.DagNodeView<N, A, V>.Deconstruct(out N Id, out A AlternateKey, out V Value, out Semifreddo.EdgeSet<N> Successors, out Semifreddo.EdgeSet<N> Predecessors) -> void
+Semifreddo.DagNodeView<N, A, V>.Equals(Semifreddo.DagNodeView<N, A, V> other) -> bool
+Semifreddo.DagNodeView<N, A, V>.Id.get -> N
+Semifreddo.DagNodeView<N, A, V>.Id.init -> void
+Semifreddo.DagNodeView<N, A, V>.Predecessors.get -> Semifreddo.EdgeSet<N>
+Semifreddo.DagNodeView<N, A, V>.Predecessors.init -> void
+Semifreddo.DagNodeView<N, A, V>.Successors.get -> Semifreddo.EdgeSet<N>
+Semifreddo.DagNodeView<N, A, V>.Successors.init -> void
+Semifreddo.DagNodeView<N, A, V>.Value.get -> V
+Semifreddo.DagNodeView<N, A, V>.Value.init -> void
+Semifreddo.DefaultSentinel<N>
+Semifreddo.DefaultSentinel<N>.DefaultSentinel() -> void
+Semifreddo.EdgeSet<N>
+Semifreddo.EdgeSet<N>.Contains(N node) -> bool
+Semifreddo.EdgeSet<N>.Count.get -> int
+Semifreddo.EdgeSet<N>.EdgeSet() -> void
+Semifreddo.EdgeSet<N>.Enumerator
+Semifreddo.EdgeSet<N>.Enumerator.Current.get -> N
+Semifreddo.EdgeSet<N>.Enumerator.Dispose() -> void
+Semifreddo.EdgeSet<N>.Enumerator.Enumerator() -> void
+Semifreddo.EdgeSet<N>.Enumerator.MoveNext() -> bool
+Semifreddo.EdgeSet<N>.Enumerator.Reset() -> void
+Semifreddo.EdgeSet<N>.GetEnumerator() -> Semifreddo.EdgeSet<N>.Enumerator
+Semifreddo.EdgeSet<N>.IsEmpty.get -> bool
+Semifreddo.EdgeSet<N>.TryGetSpan(out System.ReadOnlySpan<N> span) -> bool
+Semifreddo.IDagAdjacency<N>
+Semifreddo.IDagAdjacency<N>.Predecessors(N node) -> Semifreddo.Adjacency<N>
+Semifreddo.IDagAdjacency<N>.Successors(N node) -> Semifreddo.Adjacency<N>
+Semifreddo.IImmutable
+Semifreddo.ILeveledTopologicalOrder<TSelf, N>
+Semifreddo.ILeveledTopologicalOrder<TSelf, N>.LevelCount.get -> int
+Semifreddo.ILeveledTopologicalOrder<TSelf, N>.LevelWidth(int level) -> int
+Semifreddo.ILeveledTopologicalOrder<TSelf, N>.Tighten<TGraph>(TGraph graph) -> TSelf
+Semifreddo.ILeveledTopologicalOrder<TSelf, N>.TryGetLevel(N node, out int level) -> bool
+Semifreddo.INodeSentinel<N>
+Semifreddo.INodeSentinel<N>.IsNone(N value) -> bool
+Semifreddo.INodeSentinel<N>.None.get -> N
+Semifreddo.IRefEnumerable<T, TEnumerator>
+Semifreddo.IRefEnumerable<T, TEnumerator>.GetEnumerator() -> TEnumerator
+Semifreddo.IRefEnumerable<T, TEnumerator>.TryCopyTo(int index, System.Span<T> destination) -> bool
+Semifreddo.IRefEnumerable<T, TEnumerator>.TryGetSpan(out System.ReadOnlySpan<T> span) -> bool
+Semifreddo.ITopoEntry
+Semifreddo.ITopoEntry.Level.get -> int
+Semifreddo.ITopoEntry.Level.set -> void
+Semifreddo.ITopoEntry.Rank.get -> uint
+Semifreddo.ITopoEntry.Rank.set -> void
+Semifreddo.ITopoEntry.TracksLevels.get -> bool
+Semifreddo.ITopoOrderStorage<TSelf, N, TSentinel, TEntry>
+Semifreddo.ITopologicalOrder<TSelf, N>
+Semifreddo.ITopologicalOrder<TSelf, N>.Add(N node) -> TSelf
+Semifreddo.ITopologicalOrder<TSelf, N>.Contains(N node) -> bool
+Semifreddo.ITopologicalOrder<TSelf, N>.Empty.get -> TSelf
+Semifreddo.ITopologicalOrder<TSelf, N>.IsSameAs(TSelf other) -> bool
+Semifreddo.ITopologicalOrder<TSelf, N>.Precedes(N a, N b) -> bool
+Semifreddo.ITopologicalOrder<TSelf, N>.Remove(N node) -> TSelf
+Semifreddo.ITopologicalOrder<TSelf, N>.Replace(N oldNode, N newNode) -> TSelf
+Semifreddo.ITopologicalOrder<TSelf, N>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out TSelf result) -> bool
+Semifreddo.ITopologicalOrder<TSelf, N>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out TSelf result, out N[]? cycle) -> bool
+Semifreddo.ITopologicalOrder<TSelf, N>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out TSelf result) -> bool
+Semifreddo.ITopologicalOrder<TSelf, N>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out TSelf result, out N[]? cycle) -> bool
+Semifreddo.ITopologicalOrder<TSelf, N>.TryGetRank(N node, out long rank) -> bool
+Semifreddo.ImmDag
+Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.AddEdge(N from, N to) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.AddEdge<TOrder>(ref TOrder order, N from, N to) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.AddNode(N id, A alternateKey) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.AddNode(N id, A alternateKey, V value) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.AddNode<TOrder>(ref TOrder order, N id, A alternateKey, V value) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.ContainsEdge(N from, N to) -> bool
+Semifreddo.ImmDag<N, A, V>.ContainsNode(N id) -> bool
+Semifreddo.ImmDag<N, A, V>.EdgeCount.get -> int
+Semifreddo.ImmDag<N, A, V>.Enumerator
+Semifreddo.ImmDag<N, A, V>.Enumerator.Current.get -> Semifreddo.DagNodeView<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Enumerator.Dispose() -> void
+Semifreddo.ImmDag<N, A, V>.Enumerator.Enumerator() -> void
+Semifreddo.ImmDag<N, A, V>.Enumerator.MoveNext() -> bool
+Semifreddo.ImmDag<N, A, V>.Enumerator.Reset() -> void
+Semifreddo.ImmDag<N, A, V>.GetEnumerator() -> Semifreddo.ImmDag<N, A, V>.Enumerator
+Semifreddo.ImmDag<N, A, V>.ImmDag() -> void
+Semifreddo.ImmDag<N, A, V>.IsEmpty.get -> bool
+Semifreddo.ImmDag<N, A, V>.IsSameAs(Semifreddo.ImmDag<N, A, V> other) -> bool
+Semifreddo.ImmDag<N, A, V>.Mutate(System.Action<Semifreddo.ImmDag<N, A, V>.Scope>! batch) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Mutate(System.Action<Semifreddo.ImmDag<N, A, V>.Scope>! batch, Semifreddo.DagBatchOptions options) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch, Semifreddo.DagBatchOptions options) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Mutate<TOrder, TArg>(ref TOrder order, TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Mutate<TOrder>(ref TOrder order, System.Action<Semifreddo.ImmDag<N, A, V>.Scope>! batch) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.NodeCount.get -> int
+Semifreddo.ImmDag<N, A, V>.Predecessors(N id) -> Semifreddo.EdgeSet<N>
+Semifreddo.ImmDag<N, A, V>.RemoveEdge(N from, N to) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.RemoveNode(N id) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.RemoveNode<TOrder>(ref TOrder order, N id) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.ReplaceNode(N oldId, N newId) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.ReplaceNode(N oldId, N newId, A alternateKey, V value) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Scope
+Semifreddo.ImmDag<N, A, V>.Scope.AddEdge(N from, N to) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.AddNode(N id, A alternateKey) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.AddNode(N id, A alternateKey, V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.AddedEdges.get -> System.ReadOnlySpan<(N From, N To)>
+Semifreddo.ImmDag<N, A, V>.Scope.AddedNodes.get -> System.ReadOnlySpan<N>
+Semifreddo.ImmDag<N, A, V>.Scope.ContainsEdge(N from, N to) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.ContainsNode(N id) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.EdgeCount.get -> int
+Semifreddo.ImmDag<N, A, V>.Scope.NodeCount.get -> int
+Semifreddo.ImmDag<N, A, V>.Scope.Origin.get -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Scope.Predecessors(N id) -> Semifreddo.EdgeSet<N>
+Semifreddo.ImmDag<N, A, V>.Scope.RemoveEdge(N from, N to) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.RemoveNode(N id) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.RemovedEdges.get -> System.ReadOnlySpan<(N From, N To)>
+Semifreddo.ImmDag<N, A, V>.Scope.RemovedNodes.get -> System.ReadOnlySpan<N>
+Semifreddo.ImmDag<N, A, V>.Scope.ReplaceNode(N oldId, N newId) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.ReplaceNode(N oldId, N newId, A alternateKey, V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.ReplacedNodes.get -> System.ReadOnlySpan<(N From, N To)>
+Semifreddo.ImmDag<N, A, V>.Scope.Scope() -> void
+Semifreddo.ImmDag<N, A, V>.Scope.SetValue(N id, V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.Successors(N id) -> Semifreddo.EdgeSet<N>
+Semifreddo.ImmDag<N, A, V>.Scope.TryGetAlternateKey(N id, out A alternateKey) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.TryGetNodeByAlternateKey(A alternateKey, out N id) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.TryGetValue(N id, out V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Scope.UpdatedNodes.get -> System.ReadOnlySpan<N>
+Semifreddo.ImmDag<N, A, V>.SetValue(N id, V value) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Successors(N id) -> Semifreddo.EdgeSet<N>
+Semifreddo.ImmDag<N, A, V>.ToTransient() -> Semifreddo.ImmDag<N, A, V>.Transient!
+Semifreddo.ImmDag<N, A, V>.Transient
+Semifreddo.ImmDag<N, A, V>.Transient.AddEdge(N from, N to) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.AddNode(N id, A alternateKey) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.AddNode(N id, A alternateKey, V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.AddedEdges.get -> System.ReadOnlySpan<(N From, N To)>
+Semifreddo.ImmDag<N, A, V>.Transient.AddedNodes.get -> System.ReadOnlySpan<N>
+Semifreddo.ImmDag<N, A, V>.Transient.Clear() -> void
+Semifreddo.ImmDag<N, A, V>.Transient.ContainsEdge(N from, N to) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.ContainsNode(N id) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.EdgeCount.get -> int
+Semifreddo.ImmDag<N, A, V>.Transient.NodeCount.get -> int
+Semifreddo.ImmDag<N, A, V>.Transient.Origin.get -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Transient.Predecessors(N id) -> Semifreddo.EdgeSet<N>
+Semifreddo.ImmDag<N, A, V>.Transient.RemoveEdge(N from, N to) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.RemoveNode(N id) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.RemovedEdges.get -> System.ReadOnlySpan<(N From, N To)>
+Semifreddo.ImmDag<N, A, V>.Transient.RemovedNodes.get -> System.ReadOnlySpan<N>
+Semifreddo.ImmDag<N, A, V>.Transient.ReplaceNode(N oldId, N newId) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.ReplaceNode(N oldId, N newId, A alternateKey, V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.ReplacedNodes.get -> System.ReadOnlySpan<(N From, N To)>
+Semifreddo.ImmDag<N, A, V>.Transient.Reset(Semifreddo.ImmDag<N, A, V> source) -> void
+Semifreddo.ImmDag<N, A, V>.Transient.Scope.get -> Semifreddo.ImmDag<N, A, V>.Scope
+Semifreddo.ImmDag<N, A, V>.Transient.SetValue(N id, V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.Successors(N id) -> Semifreddo.EdgeSet<N>
+Semifreddo.ImmDag<N, A, V>.Transient.ToPersistent() -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Transient.ToPersistent(bool skipCycleCheck) -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.ImmDag<N, A, V>.Transient.TrackChanges.get -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.TrackChanges.set -> void
+Semifreddo.ImmDag<N, A, V>.Transient.Transient() -> void
+Semifreddo.ImmDag<N, A, V>.Transient.TryGetAlternateKey(N id, out A alternateKey) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.TryGetNodeByAlternateKey(A alternateKey, out N id) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.TryGetValue(N id, out V value) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.TryToPersistent(out Semifreddo.ImmDag<N, A, V> result) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.TryToPersistent(out Semifreddo.ImmDag<N, A, V> result, out N[]? cycle) -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.UpdatedNodes.get -> System.ReadOnlySpan<N>
+Semifreddo.ImmDag<N, A, V>.Transient.Validate() -> bool
+Semifreddo.ImmDag<N, A, V>.Transient.Validate(out N[]? cycle) -> bool
+Semifreddo.ImmDag<N, A, V>.TryAddEdge(N from, N to, out Semifreddo.ImmDag<N, A, V> result, out N[]? cycle) -> bool
+Semifreddo.ImmDag<N, A, V>.TryAddEdge<TOrder>(ref TOrder order, N from, N to, out Semifreddo.ImmDag<N, A, V> result, out N[]? cycle) -> bool
+Semifreddo.ImmDag<N, A, V>.TryGetAlternateKey(N id, out A alternateKey) -> bool
+Semifreddo.ImmDag<N, A, V>.TryGetNode(N id, out Semifreddo.DagNodeView<N, A, V> node) -> bool
+Semifreddo.ImmDag<N, A, V>.TryGetNodeByAlternateKey(A alternateKey, out N id) -> bool
+Semifreddo.ImmDag<N, A, V>.TryGetValue(N id, out V value) -> bool
+Semifreddo.ImmDag<N, A, V>.TryMutate<TArg>(TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch, Semifreddo.DagBatchOptions options, out Semifreddo.ImmDag<N, A, V> result, out N[]? cycle) -> bool
+Semifreddo.ImmDag<N, A, V>.TryMutate<TArg>(TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch, out Semifreddo.ImmDag<N, A, V> result, out N[]? cycle) -> bool
+Semifreddo.ImmDag<N, A, V>.TryMutate<TOrder, TArg>(ref TOrder order, TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch, out Semifreddo.ImmDag<N, A, V> result, out N[]? cycle) -> bool
+Semifreddo.ImmFlexVector
+Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Add(T item) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.AddRange(Semifreddo.ImmFlexVector<T> other) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.AddRange(System.Collections.Generic.IEnumerable<T>! items) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.AddRange(System.ReadOnlySpan<T> items) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.ChunkEnumerable
+Semifreddo.ImmFlexVector<T>.ChunkEnumerable.ChunkEnumerable() -> void
+Semifreddo.ImmFlexVector<T>.ChunkEnumerable.GetEnumerator() -> Semifreddo.ImmFlexVector<T>.ChunkEnumerator
+Semifreddo.ImmFlexVector<T>.ChunkEnumerator
+Semifreddo.ImmFlexVector<T>.ChunkEnumerator.ChunkEnumerator() -> void
+Semifreddo.ImmFlexVector<T>.ChunkEnumerator.Current.get -> System.ReadOnlySpan<T>
+Semifreddo.ImmFlexVector<T>.ChunkEnumerator.MoveNext() -> bool
+Semifreddo.ImmFlexVector<T>.Chunks.get -> Semifreddo.ImmFlexVector<T>.ChunkEnumerable
+Semifreddo.ImmFlexVector<T>.CopyTo(System.Span<T> destination) -> void
+Semifreddo.ImmFlexVector<T>.Count.get -> int
+Semifreddo.ImmFlexVector<T>.Enumerator
+Semifreddo.ImmFlexVector<T>.Enumerator.Current.get -> T
+Semifreddo.ImmFlexVector<T>.Enumerator.Dispose() -> void
+Semifreddo.ImmFlexVector<T>.Enumerator.Enumerator() -> void
+Semifreddo.ImmFlexVector<T>.Enumerator.MoveNext() -> bool
+Semifreddo.ImmFlexVector<T>.Enumerator.Reset() -> void
+Semifreddo.ImmFlexVector<T>.First.get -> T
+Semifreddo.ImmFlexVector<T>.GetEnumerator() -> Semifreddo.ImmFlexVector<T>.Enumerator
+Semifreddo.ImmFlexVector<T>.ImmFlexVector() -> void
+Semifreddo.ImmFlexVector<T>.Insert(int index, T item) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.InsertRange(int index, Semifreddo.ImmFlexVector<T> items) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.IsEmpty.get -> bool
+Semifreddo.ImmFlexVector<T>.IsSameAs(Semifreddo.ImmFlexVector<T> other) -> bool
+Semifreddo.ImmFlexVector<T>.Last.get -> T
+Semifreddo.ImmFlexVector<T>.Mutate(System.Action<Semifreddo.ImmFlexVector<T>.Scope>! batch) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmFlexVector<T>.Scope, TArg>! batch) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Prepend(T item) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.RemoveAt(int index) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.RemoveLast() -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.RemoveRange(int index, int count) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Scope
+Semifreddo.ImmFlexVector<T>.Scope.Add(T item) -> void
+Semifreddo.ImmFlexVector<T>.Scope.AddRange(Semifreddo.ImmFlexVector<T> items) -> void
+Semifreddo.ImmFlexVector<T>.Scope.AddRange(System.ReadOnlySpan<T> items) -> void
+Semifreddo.ImmFlexVector<T>.Scope.Clear() -> void
+Semifreddo.ImmFlexVector<T>.Scope.Count.get -> int
+Semifreddo.ImmFlexVector<T>.Scope.Insert(int index, T item) -> void
+Semifreddo.ImmFlexVector<T>.Scope.ItemRef(int index) -> T
+Semifreddo.ImmFlexVector<T>.Scope.RemoveAt(int index) -> void
+Semifreddo.ImmFlexVector<T>.Scope.RemoveRange(int index, int count) -> void
+Semifreddo.ImmFlexVector<T>.Scope.Scope() -> void
+Semifreddo.ImmFlexVector<T>.Scope.Skip(int count) -> void
+Semifreddo.ImmFlexVector<T>.Scope.Take(int count) -> void
+Semifreddo.ImmFlexVector<T>.Scope.this[int index].get -> T
+Semifreddo.ImmFlexVector<T>.Scope.this[int index].set -> void
+Semifreddo.ImmFlexVector<T>.SetItem(int index, T item) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Skip(int count) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Slice(int start, int length) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Take(int count) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.ToArray() -> T[]!
+Semifreddo.ImmFlexVector<T>.ToTransient() -> Semifreddo.ImmFlexVector<T>.Transient!
+Semifreddo.ImmFlexVector<T>.Transient
+Semifreddo.ImmFlexVector<T>.Transient.Add(T item) -> void
+Semifreddo.ImmFlexVector<T>.Transient.AddRange(Semifreddo.ImmFlexVector<T> items) -> void
+Semifreddo.ImmFlexVector<T>.Transient.AddRange(System.ReadOnlySpan<T> items) -> void
+Semifreddo.ImmFlexVector<T>.Transient.Clear() -> void
+Semifreddo.ImmFlexVector<T>.Transient.Count.get -> int
+Semifreddo.ImmFlexVector<T>.Transient.GetEnumerator() -> Semifreddo.ImmFlexVector<T>.Enumerator
+Semifreddo.ImmFlexVector<T>.Transient.Insert(int index, T item) -> void
+Semifreddo.ImmFlexVector<T>.Transient.ItemRef(int index) -> T
+Semifreddo.ImmFlexVector<T>.Transient.RemoveAt(int index) -> void
+Semifreddo.ImmFlexVector<T>.Transient.RemoveLast() -> void
+Semifreddo.ImmFlexVector<T>.Transient.RemoveRange(int index, int count) -> void
+Semifreddo.ImmFlexVector<T>.Transient.Reset(Semifreddo.ImmFlexVector<T> source) -> void
+Semifreddo.ImmFlexVector<T>.Transient.Skip(int count) -> void
+Semifreddo.ImmFlexVector<T>.Transient.Take(int count) -> void
+Semifreddo.ImmFlexVector<T>.Transient.ToPersistent() -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Transient.Transient() -> void
+Semifreddo.ImmFlexVector<T>.Transient.this[int index].get -> T
+Semifreddo.ImmFlexVector<T>.Transient.this[int index].set -> void
+Semifreddo.ImmFlexVector<T>.TrimExcess() -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Update(int index, System.Func<T, T>! update) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.Update<TArg>(int index, TArg arg, System.Func<T, TArg, T>! update) -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.this[System.Range range].get -> Semifreddo.ImmFlexVector<T>
+Semifreddo.ImmFlexVector<T>.this[int index].get -> T
+Semifreddo.ImmInterlocked
+Semifreddo.ImmLeveledPkTopoOrder
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Add(N node) -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.AddEdge<TGraph>(TGraph graph, N from, N to) -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.ComputeBottomLevels<TGraph>(TGraph graph, System.Func<N, double>! cost, System.Collections.Generic.Dictionary<N, double>! bottom) -> double
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Contains(N node) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.CopyByLevel(System.Span<N> nodes, System.Span<int> levelStarts) -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.CopyByLevel<TGraph>(TGraph graph, System.Span<N> nodes, System.Span<int> levelStarts, System.Span<int> predecessorCounts) -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.CopyTo(System.Span<N> destination) -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Count.get -> int
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerable<TGraph>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerable<TGraph>.DetailEnumerable() -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerable<TGraph>.GetEnumerator() -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerator<TGraph>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerator<TGraph>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerator<TGraph>.Current.get -> Semifreddo.TopoNodeInfo<N>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerator<TGraph>.DetailEnumerator() -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerator<TGraph>.MoveNext() -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.GetEnumerator() -> Semifreddo.TopoEnumerator<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.ImmLeveledPkTopoOrder() -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.IsEmpty.get -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.IsSameAs(Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel> other) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Level(N node) -> int
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.LevelCount.get -> int
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.LevelWidth(int level) -> int
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.MaxLevel.get -> int
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient!, TArg>! batch) -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Precedes(N a, N b) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Remove(N node) -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Replace(N oldNode, N newNode) -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Tighten<TGraph>(TGraph graph) -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.ToArray() -> N[]!
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.ToLevels() -> N[]![]!
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.ToTransient() -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient!
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient.LevelCount.get -> int
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient.LevelWidth(int level) -> int
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient.Tighten<TGraph>(TGraph graph) -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient.Transient() -> void
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Transient.TryGetLevel(N node, out int level) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel> result) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel> result, out N[]? cycle) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel> result) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel> result, out N[]? cycle) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.TryGetLevel(N node, out int level) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.TryGetRank(N node, out long rank) -> bool
+Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.WithDetails<TGraph>(TGraph graph) -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.DetailEnumerable<TGraph>
+Semifreddo.ImmMap
+Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.AddOrUpdate(K key, V addValue, System.Func<K, V, V>! update) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>.AlternateLookup() -> void
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>.ContainsKey(TAlt key) -> bool
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>.Map.get -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>.Remove(TAlt key) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>.TryGetValue(TAlt key, out K actualKey, out V value) -> bool
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>.TryGetValue(TAlt key, out V value) -> bool
+Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>.this[TAlt key].get -> V
+Semifreddo.ImmMap<K, V>.ContainsKey(K key) -> bool
+Semifreddo.ImmMap<K, V>.Count.get -> int
+Semifreddo.ImmMap<K, V>.Enumerator
+Semifreddo.ImmMap<K, V>.Enumerator.Current.get -> System.Collections.Generic.KeyValuePair<K, V>
+Semifreddo.ImmMap<K, V>.Enumerator.CurrentKey.get -> K
+Semifreddo.ImmMap<K, V>.Enumerator.CurrentValue.get -> V
+Semifreddo.ImmMap<K, V>.Enumerator.Dispose() -> void
+Semifreddo.ImmMap<K, V>.Enumerator.Enumerator() -> void
+Semifreddo.ImmMap<K, V>.Enumerator.MoveNext() -> bool
+Semifreddo.ImmMap<K, V>.Enumerator.Reset() -> void
+Semifreddo.ImmMap<K, V>.GetAlternateLookup<TAlt>() -> Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt>
+Semifreddo.ImmMap<K, V>.GetEnumerator() -> Semifreddo.ImmMap<K, V>.Enumerator
+Semifreddo.ImmMap<K, V>.GetValueOrDefault(K key, V? defaultValue = default(V?)) -> V?
+Semifreddo.ImmMap<K, V>.GetValueRefOrNullRef(K key) -> V
+Semifreddo.ImmMap<K, V>.ImmMap() -> void
+Semifreddo.ImmMap<K, V>.IsEmpty.get -> bool
+Semifreddo.ImmMap<K, V>.IsSameAs(Semifreddo.ImmMap<K, V> other) -> bool
+Semifreddo.ImmMap<K, V>.Keys.get -> System.Collections.Generic.IEnumerable<K>!
+Semifreddo.ImmMap<K, V>.Mutate(System.Action<Semifreddo.ImmMap<K, V>.Scope>! batch) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmMap<K, V>.Scope, TArg>! batch) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.Remove(K key) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.Scope
+Semifreddo.ImmMap<K, V>.Scope.Clear() -> void
+Semifreddo.ImmMap<K, V>.Scope.ContainsKey(K key) -> bool
+Semifreddo.ImmMap<K, V>.Scope.Count.get -> int
+Semifreddo.ImmMap<K, V>.Scope.GetAlternateLookup<TAlt>() -> Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmMap<K, V>.Scope.GetValueRefOrAddDefault(K key, out bool exists) -> V
+Semifreddo.ImmMap<K, V>.Scope.Remove(K key) -> bool
+Semifreddo.ImmMap<K, V>.Scope.Scope() -> void
+Semifreddo.ImmMap<K, V>.Scope.SetItem(K key, V value) -> bool
+Semifreddo.ImmMap<K, V>.Scope.TryAdd(K key, V value) -> bool
+Semifreddo.ImmMap<K, V>.Scope.TryGetValue(K key, out V value) -> bool
+Semifreddo.ImmMap<K, V>.Scope.this[K key].get -> V
+Semifreddo.ImmMap<K, V>.Scope.this[K key].set -> void
+Semifreddo.ImmMap<K, V>.SetItem(K key, V value) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.SetItems(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<K, V>>! items) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.SetItems(System.ReadOnlySpan<System.Collections.Generic.KeyValuePair<K, V>> items) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.ToTransient() -> Semifreddo.ImmMap<K, V>.Transient!
+Semifreddo.ImmMap<K, V>.Transient
+Semifreddo.ImmMap<K, V>.Transient.Clear() -> void
+Semifreddo.ImmMap<K, V>.Transient.ContainsKey(K key) -> bool
+Semifreddo.ImmMap<K, V>.Transient.Count.get -> int
+Semifreddo.ImmMap<K, V>.Transient.GetAlternateLookup<TAlt>() -> Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmMap<K, V>.Transient.GetEnumerator() -> Semifreddo.ImmMap<K, V>.Enumerator
+Semifreddo.ImmMap<K, V>.Transient.GetValueRefOrAddDefault(K key, out bool exists) -> V
+Semifreddo.ImmMap<K, V>.Transient.GetValueRefOrNullRef(K key) -> V
+Semifreddo.ImmMap<K, V>.Transient.Remove(K key) -> bool
+Semifreddo.ImmMap<K, V>.Transient.Reset(Semifreddo.ImmMap<K, V> source) -> void
+Semifreddo.ImmMap<K, V>.Transient.SetItem(K key, V value) -> bool
+Semifreddo.ImmMap<K, V>.Transient.ToPersistent() -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.Transient.Transient() -> void
+Semifreddo.ImmMap<K, V>.Transient.TryAdd(K key, V value) -> bool
+Semifreddo.ImmMap<K, V>.Transient.TryGetValue(K key, out V value) -> bool
+Semifreddo.ImmMap<K, V>.Transient.this[K key].get -> V
+Semifreddo.ImmMap<K, V>.Transient.this[K key].set -> void
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>.ContainsKey(TAlt key) -> bool
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>.GetValueRefOrAddDefault(TAlt key, out bool exists) -> V
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>.Remove(TAlt key) -> bool
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>.TransientAlternateLookup() -> void
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>.TryGetValue(TAlt key, out V value) -> bool
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>.this[TAlt key].get -> V
+Semifreddo.ImmMap<K, V>.TransientAlternateLookup<TAlt>.this[TAlt key].set -> void
+Semifreddo.ImmMap<K, V>.TryGetAlternateLookup<TAlt>(out Semifreddo.ImmMap<K, V>.AlternateLookup<TAlt> lookup) -> bool
+Semifreddo.ImmMap<K, V>.TryGetValue(K key, out V value) -> bool
+Semifreddo.ImmMap<K, V>.Update<TArg>(K key, TArg arg, System.Func<V?, bool, TArg, V>! update) -> Semifreddo.ImmMap<K, V>
+Semifreddo.ImmMap<K, V>.Values.get -> System.Collections.Generic.IEnumerable<V>!
+Semifreddo.ImmMap<K, V>.this[K key].get -> V
+Semifreddo.ImmOrderedMap
+Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>.AlternateLookup() -> void
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>.ContainsKey(TAlt key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>.Map.get -> Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>.Remove(TAlt key) -> Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>.TryGetValue(TAlt key, out K actualKey, out V value) -> bool
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>.TryGetValue(TAlt key, out V value) -> bool
+Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>.this[TAlt key].get -> V
+Semifreddo.ImmOrderedMap<K, V>.ContainsKey(K key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Count.get -> int
+Semifreddo.ImmOrderedMap<K, V>.Enumerator
+Semifreddo.ImmOrderedMap<K, V>.Enumerator.Current.get -> System.Collections.Generic.KeyValuePair<K, V>
+Semifreddo.ImmOrderedMap<K, V>.Enumerator.CurrentKey.get -> K
+Semifreddo.ImmOrderedMap<K, V>.Enumerator.CurrentValue.get -> V
+Semifreddo.ImmOrderedMap<K, V>.Enumerator.Dispose() -> void
+Semifreddo.ImmOrderedMap<K, V>.Enumerator.Enumerator() -> void
+Semifreddo.ImmOrderedMap<K, V>.Enumerator.MoveNext() -> bool
+Semifreddo.ImmOrderedMap<K, V>.Enumerator.Reset() -> void
+Semifreddo.ImmOrderedMap<K, V>.First.get -> System.Collections.Generic.KeyValuePair<K, V>
+Semifreddo.ImmOrderedMap<K, V>.GetAlternateLookup<TAlt>() -> Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt>
+Semifreddo.ImmOrderedMap<K, V>.GetEnumerator() -> Semifreddo.ImmOrderedMap<K, V>.Enumerator
+Semifreddo.ImmOrderedMap<K, V>.GetValueRefOrNullRef(K key) -> V
+Semifreddo.ImmOrderedMap<K, V>.ImmOrderedMap() -> void
+Semifreddo.ImmOrderedMap<K, V>.IsEmpty.get -> bool
+Semifreddo.ImmOrderedMap<K, V>.IsSameAs(Semifreddo.ImmOrderedMap<K, V> other) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Keys.get -> System.Collections.Generic.IEnumerable<K>!
+Semifreddo.ImmOrderedMap<K, V>.Last.get -> System.Collections.Generic.KeyValuePair<K, V>
+Semifreddo.ImmOrderedMap<K, V>.Mutate(System.Action<Semifreddo.ImmOrderedMap<K, V>.Scope>! batch) -> Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmOrderedMap<K, V>.Scope, TArg>! batch) -> Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.Remove(K key) -> Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.Scope
+Semifreddo.ImmOrderedMap<K, V>.Scope.Clear() -> void
+Semifreddo.ImmOrderedMap<K, V>.Scope.ContainsKey(K key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Scope.Count.get -> int
+Semifreddo.ImmOrderedMap<K, V>.Scope.GetAlternateLookup<TAlt>() -> Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmOrderedMap<K, V>.Scope.GetValueRefOrAddDefault(K key, out bool exists) -> V
+Semifreddo.ImmOrderedMap<K, V>.Scope.Remove(K key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Scope.Scope() -> void
+Semifreddo.ImmOrderedMap<K, V>.Scope.TryGetValue(K key, out V value) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Scope.this[K key].get -> V
+Semifreddo.ImmOrderedMap<K, V>.Scope.this[K key].set -> void
+Semifreddo.ImmOrderedMap<K, V>.SetItem(K key, V value) -> Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.ToTransient() -> Semifreddo.ImmOrderedMap<K, V>.Transient!
+Semifreddo.ImmOrderedMap<K, V>.Transient
+Semifreddo.ImmOrderedMap<K, V>.Transient.Clear() -> void
+Semifreddo.ImmOrderedMap<K, V>.Transient.ContainsKey(K key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Transient.Count.get -> int
+Semifreddo.ImmOrderedMap<K, V>.Transient.GetAlternateLookup<TAlt>() -> Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmOrderedMap<K, V>.Transient.GetEnumerator() -> Semifreddo.ImmOrderedMap<K, V>.Enumerator
+Semifreddo.ImmOrderedMap<K, V>.Transient.GetValueRefOrAddDefault(K key, out bool exists) -> V
+Semifreddo.ImmOrderedMap<K, V>.Transient.Remove(K key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Transient.Reset(Semifreddo.ImmOrderedMap<K, V> source) -> void
+Semifreddo.ImmOrderedMap<K, V>.Transient.ToPersistent() -> Semifreddo.ImmOrderedMap<K, V>
+Semifreddo.ImmOrderedMap<K, V>.Transient.Transient() -> void
+Semifreddo.ImmOrderedMap<K, V>.Transient.TryGetValue(K key, out V value) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Transient.this[K key].get -> V
+Semifreddo.ImmOrderedMap<K, V>.Transient.this[K key].set -> void
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>.ContainsKey(TAlt key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>.GetValueRefOrAddDefault(TAlt key, out bool exists) -> V
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>.Remove(TAlt key) -> bool
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>.TransientAlternateLookup() -> void
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>.TryGetValue(TAlt key, out V value) -> bool
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>.this[TAlt key].get -> V
+Semifreddo.ImmOrderedMap<K, V>.TransientAlternateLookup<TAlt>.this[TAlt key].set -> void
+Semifreddo.ImmOrderedMap<K, V>.TryGetAlternateLookup<TAlt>(out Semifreddo.ImmOrderedMap<K, V>.AlternateLookup<TAlt> lookup) -> bool
+Semifreddo.ImmOrderedMap<K, V>.TryGetValue(K key, out V value) -> bool
+Semifreddo.ImmOrderedMap<K, V>.Values.get -> System.Collections.Generic.IEnumerable<V>!
+Semifreddo.ImmOrderedMap<K, V>.this[K key].get -> V
+Semifreddo.ImmPkTopoOrder
+Semifreddo.ImmPkTopoOrder<N, TSentinel>
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Add(N node) -> Semifreddo.ImmPkTopoOrder<N, TSentinel>
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.AddEdge<TGraph>(TGraph graph, N from, N to) -> Semifreddo.ImmPkTopoOrder<N, TSentinel>
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.ComputeBottomLevels<TGraph>(TGraph graph, System.Func<N, double>! cost, System.Collections.Generic.Dictionary<N, double>! bottom) -> double
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Contains(N node) -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.CopyTo(System.Span<N> destination) -> void
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Count.get -> int
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.GetEnumerator() -> Semifreddo.TopoEnumerator<N, TSentinel>
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.ImmPkTopoOrder() -> void
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.IsEmpty.get -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.IsSameAs(Semifreddo.ImmPkTopoOrder<N, TSentinel> other) -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmPkTopoOrder<N, TSentinel>.Transient!, TArg>! batch) -> Semifreddo.ImmPkTopoOrder<N, TSentinel>
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Precedes(N a, N b) -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Remove(N node) -> Semifreddo.ImmPkTopoOrder<N, TSentinel>
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Replace(N oldNode, N newNode) -> Semifreddo.ImmPkTopoOrder<N, TSentinel>
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.ToArray() -> N[]!
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.ToTransient() -> Semifreddo.ImmPkTopoOrder<N, TSentinel>.Transient!
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Transient
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.Transient.Transient() -> void
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out Semifreddo.ImmPkTopoOrder<N, TSentinel> result) -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out Semifreddo.ImmPkTopoOrder<N, TSentinel> result, out N[]? cycle) -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out Semifreddo.ImmPkTopoOrder<N, TSentinel> result) -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out Semifreddo.ImmPkTopoOrder<N, TSentinel> result, out N[]? cycle) -> bool
+Semifreddo.ImmPkTopoOrder<N, TSentinel>.TryGetRank(N node, out long rank) -> bool
+Semifreddo.ImmSet
+Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.Add(T item) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.AlternateLookup<TAlt>
+Semifreddo.ImmSet<T>.AlternateLookup<TAlt>.AlternateLookup() -> void
+Semifreddo.ImmSet<T>.AlternateLookup<TAlt>.Contains(TAlt item) -> bool
+Semifreddo.ImmSet<T>.AlternateLookup<TAlt>.Remove(TAlt item) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.AlternateLookup<TAlt>.Set.get -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.AlternateLookup<TAlt>.TryGetValue(TAlt item, out T actualValue) -> bool
+Semifreddo.ImmSet<T>.Contains(T item) -> bool
+Semifreddo.ImmSet<T>.Count.get -> int
+Semifreddo.ImmSet<T>.Enumerator
+Semifreddo.ImmSet<T>.Enumerator.Current.get -> T
+Semifreddo.ImmSet<T>.Enumerator.Dispose() -> void
+Semifreddo.ImmSet<T>.Enumerator.Enumerator() -> void
+Semifreddo.ImmSet<T>.Enumerator.MoveNext() -> bool
+Semifreddo.ImmSet<T>.Enumerator.Reset() -> void
+Semifreddo.ImmSet<T>.Except(Semifreddo.ImmSet<T> other) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.GetAlternateLookup<TAlt>() -> Semifreddo.ImmSet<T>.AlternateLookup<TAlt>
+Semifreddo.ImmSet<T>.GetEnumerator() -> Semifreddo.ImmSet<T>.Enumerator
+Semifreddo.ImmSet<T>.ImmSet() -> void
+Semifreddo.ImmSet<T>.IsEmpty.get -> bool
+Semifreddo.ImmSet<T>.IsSameAs(Semifreddo.ImmSet<T> other) -> bool
+Semifreddo.ImmSet<T>.Mutate(System.Action<Semifreddo.ImmSet<T>.Scope>! batch) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmSet<T>.Scope, TArg>! batch) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.Remove(T item) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.Scope
+Semifreddo.ImmSet<T>.Scope.Add(T item) -> bool
+Semifreddo.ImmSet<T>.Scope.Clear() -> void
+Semifreddo.ImmSet<T>.Scope.Contains(T item) -> bool
+Semifreddo.ImmSet<T>.Scope.Count.get -> int
+Semifreddo.ImmSet<T>.Scope.GetAlternateLookup<TAlt>() -> Semifreddo.ImmSet<T>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmSet<T>.Scope.Remove(T item) -> bool
+Semifreddo.ImmSet<T>.Scope.Scope() -> void
+Semifreddo.ImmSet<T>.ToTransient() -> Semifreddo.ImmSet<T>.Transient!
+Semifreddo.ImmSet<T>.Transient
+Semifreddo.ImmSet<T>.Transient.Add(T item) -> bool
+Semifreddo.ImmSet<T>.Transient.Clear() -> void
+Semifreddo.ImmSet<T>.Transient.Contains(T item) -> bool
+Semifreddo.ImmSet<T>.Transient.Count.get -> int
+Semifreddo.ImmSet<T>.Transient.GetAlternateLookup<TAlt>() -> Semifreddo.ImmSet<T>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmSet<T>.Transient.GetEnumerator() -> Semifreddo.ImmSet<T>.Enumerator
+Semifreddo.ImmSet<T>.Transient.Remove(T item) -> bool
+Semifreddo.ImmSet<T>.Transient.Reset(Semifreddo.ImmSet<T> source) -> void
+Semifreddo.ImmSet<T>.Transient.ToPersistent() -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.Transient.Transient() -> void
+Semifreddo.ImmSet<T>.TransientAlternateLookup<TAlt>
+Semifreddo.ImmSet<T>.TransientAlternateLookup<TAlt>.Add(TAlt item) -> bool
+Semifreddo.ImmSet<T>.TransientAlternateLookup<TAlt>.Contains(TAlt item) -> bool
+Semifreddo.ImmSet<T>.TransientAlternateLookup<TAlt>.Remove(TAlt item) -> bool
+Semifreddo.ImmSet<T>.TransientAlternateLookup<TAlt>.TransientAlternateLookup() -> void
+Semifreddo.ImmSet<T>.TryGetAlternateLookup<TAlt>(out Semifreddo.ImmSet<T>.AlternateLookup<TAlt> lookup) -> bool
+Semifreddo.ImmSet<T>.Union(Semifreddo.ImmSet<T> other) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.Union(System.Collections.Generic.IEnumerable<T>! items) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmSet<T>.Union(System.ReadOnlySpan<T> items) -> Semifreddo.ImmSet<T>
+Semifreddo.ImmVector
+Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.Add(T item) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.AddRange(System.Collections.Generic.IEnumerable<T>! items) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.AddRange(System.ReadOnlySpan<T> items) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.ChunkEnumerable
+Semifreddo.ImmVector<T>.ChunkEnumerable.ChunkEnumerable() -> void
+Semifreddo.ImmVector<T>.ChunkEnumerable.GetEnumerator() -> Semifreddo.ImmVector<T>.ChunkEnumerator
+Semifreddo.ImmVector<T>.ChunkEnumerator
+Semifreddo.ImmVector<T>.ChunkEnumerator.ChunkEnumerator() -> void
+Semifreddo.ImmVector<T>.ChunkEnumerator.Current.get -> System.ReadOnlySpan<T>
+Semifreddo.ImmVector<T>.ChunkEnumerator.MoveNext() -> bool
+Semifreddo.ImmVector<T>.Chunks.get -> Semifreddo.ImmVector<T>.ChunkEnumerable
+Semifreddo.ImmVector<T>.CopyTo(System.Span<T> destination) -> void
+Semifreddo.ImmVector<T>.Count.get -> int
+Semifreddo.ImmVector<T>.Enumerator
+Semifreddo.ImmVector<T>.Enumerator.Current.get -> T
+Semifreddo.ImmVector<T>.Enumerator.Dispose() -> void
+Semifreddo.ImmVector<T>.Enumerator.Enumerator() -> void
+Semifreddo.ImmVector<T>.Enumerator.MoveNext() -> bool
+Semifreddo.ImmVector<T>.Enumerator.Reset() -> void
+Semifreddo.ImmVector<T>.GetEnumerator() -> Semifreddo.ImmVector<T>.Enumerator
+Semifreddo.ImmVector<T>.ImmVector() -> void
+Semifreddo.ImmVector<T>.IsEmpty.get -> bool
+Semifreddo.ImmVector<T>.IsSameAs(Semifreddo.ImmVector<T> other) -> bool
+Semifreddo.ImmVector<T>.Last.get -> T
+Semifreddo.ImmVector<T>.Mutate(System.Action<Semifreddo.ImmVector<T>.Scope>! batch) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmVector<T>.Scope, TArg>! batch) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.RemoveLast() -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.Scope
+Semifreddo.ImmVector<T>.Scope.Add(T item) -> void
+Semifreddo.ImmVector<T>.Scope.AddRange(System.ReadOnlySpan<T> items) -> void
+Semifreddo.ImmVector<T>.Scope.Clear() -> void
+Semifreddo.ImmVector<T>.Scope.Count.get -> int
+Semifreddo.ImmVector<T>.Scope.ItemRef(int index) -> T
+Semifreddo.ImmVector<T>.Scope.RemoveLast() -> void
+Semifreddo.ImmVector<T>.Scope.Scope() -> void
+Semifreddo.ImmVector<T>.Scope.Take(int count) -> void
+Semifreddo.ImmVector<T>.Scope.this[int index].get -> T
+Semifreddo.ImmVector<T>.Scope.this[int index].set -> void
+Semifreddo.ImmVector<T>.SetItem(int index, T item) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.Take(int count) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.ToArray() -> T[]!
+Semifreddo.ImmVector<T>.ToTransient() -> Semifreddo.ImmVector<T>.Transient!
+Semifreddo.ImmVector<T>.Transient
+Semifreddo.ImmVector<T>.Transient.Add(T item) -> void
+Semifreddo.ImmVector<T>.Transient.AddRange(System.ReadOnlySpan<T> items) -> void
+Semifreddo.ImmVector<T>.Transient.Clear() -> void
+Semifreddo.ImmVector<T>.Transient.Count.get -> int
+Semifreddo.ImmVector<T>.Transient.GetEnumerator() -> Semifreddo.ImmVector<T>.Enumerator
+Semifreddo.ImmVector<T>.Transient.ItemRef(int index) -> T
+Semifreddo.ImmVector<T>.Transient.RemoveLast() -> void
+Semifreddo.ImmVector<T>.Transient.Reset(Semifreddo.ImmVector<T> source) -> void
+Semifreddo.ImmVector<T>.Transient.Take(int count) -> void
+Semifreddo.ImmVector<T>.Transient.ToPersistent() -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.Transient.Transient() -> void
+Semifreddo.ImmVector<T>.Transient.this[int index].get -> T
+Semifreddo.ImmVector<T>.Transient.this[int index].set -> void
+Semifreddo.ImmVector<T>.TrimExcess() -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.Update(int index, System.Func<T, T>! update) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.Update<TArg>(int index, TArg arg, System.Func<T, TArg, T>! update) -> Semifreddo.ImmVector<T>
+Semifreddo.ImmVector<T>.this[int index].get -> T
+Semifreddo.MinValueSentinel<N>
+Semifreddo.MinValueSentinel<N>.MinValueSentinel() -> void
+Semifreddo.NoLevels
+Semifreddo.NoLevels.Level.get -> int
+Semifreddo.NoLevels.Level.set -> void
+Semifreddo.NoLevels.NoLevels() -> void
+Semifreddo.NoLevels.Rank.get -> uint
+Semifreddo.NoLevels.Rank.set -> void
+Semifreddo.NoPayload
+Semifreddo.NoPayload.Equals(Semifreddo.NoPayload other) -> bool
+Semifreddo.NoPayload.NoPayload() -> void
+Semifreddo.Reclamation.RetiredNode<N, A, V>
+Semifreddo.Reclamation.RetiredNode<N, A, V>.AlternateKey.get -> A
+Semifreddo.Reclamation.RetiredNode<N, A, V>.AlternateKey.init -> void
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Deconstruct(out N Id, out A AlternateKey, out V Value, out long Stamp) -> void
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Equals(Semifreddo.Reclamation.RetiredNode<N, A, V> other) -> bool
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Id.get -> N
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Id.init -> void
+Semifreddo.Reclamation.RetiredNode<N, A, V>.RetiredNode() -> void
+Semifreddo.Reclamation.RetiredNode<N, A, V>.RetiredNode(N Id, A AlternateKey, V Value, long Stamp) -> void
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Stamp.get -> long
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Stamp.init -> void
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Value.get -> V
+Semifreddo.Reclamation.RetiredNode<N, A, V>.Value.init -> void
+Semifreddo.Reclamation.RetiringDag
+Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.AddNode(N id, A alternateKey, V value) -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.CopyRetiredTo(System.Span<Semifreddo.Reclamation.RetiredNode<N, A, V>> destination) -> int
+Semifreddo.Reclamation.RetiringDag<N, A, V>.Graph.get -> Semifreddo.ImmDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.HasRetired.get -> bool
+Semifreddo.Reclamation.RetiringDag<N, A, V>.IsSameAs(Semifreddo.Reclamation.RetiringDag<N, A, V> other) -> bool
+Semifreddo.Reclamation.RetiringDag<N, A, V>.Mutate(System.Action<Semifreddo.ImmDag<N, A, V>.Scope>! batch) -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch) -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.Mutate<TArg>(TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch, Semifreddo.DagBatchOptions options) -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.Reclaim(System.ReadOnlySpan<Semifreddo.Reclamation.RetiredNode<N, A, V>> candidates) -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.Reclaim(System.ReadOnlySpan<Semifreddo.Reclamation.RetiredNode<N, A, V>> candidates, System.Collections.Generic.List<Semifreddo.Reclamation.RetiredNode<N, A, V>>! reclaimed) -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.ReclaimAll() -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.RemoveNode(N id) -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+Semifreddo.Reclamation.RetiringDag<N, A, V>.Retired.get -> System.Collections.Generic.IEnumerable<Semifreddo.Reclamation.RetiredNode<N, A, V>>!
+Semifreddo.Reclamation.RetiringDag<N, A, V>.RetiredCount.get -> int
+Semifreddo.Reclamation.RetiringDag<N, A, V>.RetiringDag() -> void
+Semifreddo.Reclamation.RetiringDag<N, A, V>.TryGetRetired(long stamp, out Semifreddo.Reclamation.RetiredNode<N, A, V> node) -> bool
+Semifreddo.Reclamation.RetiringDag<N, A, V>.TryMutate<TArg>(TArg arg, System.Action<Semifreddo.ImmDag<N, A, V>.Scope, TArg>! batch, out Semifreddo.Reclamation.RetiringDag<N, A, V> result, out N[]? cycle) -> bool
+Semifreddo.TopoEnumerator<N, TSentinel>
+Semifreddo.TopoEnumerator<N, TSentinel>.Current.get -> N
+Semifreddo.TopoEnumerator<N, TSentinel>.Dispose() -> void
+Semifreddo.TopoEnumerator<N, TSentinel>.MoveNext() -> bool
+Semifreddo.TopoEnumerator<N, TSentinel>.Reset() -> void
+Semifreddo.TopoEnumerator<N, TSentinel>.TopoEnumerator() -> void
+Semifreddo.TopoNodeInfo<N>
+Semifreddo.TopoNodeInfo<N>.Deconstruct(out N Node, out long Rank, out int Level, out int PredecessorCount) -> void
+Semifreddo.TopoNodeInfo<N>.Equals(Semifreddo.TopoNodeInfo<N> other) -> bool
+Semifreddo.TopoNodeInfo<N>.Level.get -> int
+Semifreddo.TopoNodeInfo<N>.Level.init -> void
+Semifreddo.TopoNodeInfo<N>.Node.get -> N
+Semifreddo.TopoNodeInfo<N>.Node.init -> void
+Semifreddo.TopoNodeInfo<N>.PredecessorCount.get -> int
+Semifreddo.TopoNodeInfo<N>.PredecessorCount.init -> void
+Semifreddo.TopoNodeInfo<N>.Rank.get -> long
+Semifreddo.TopoNodeInfo<N>.Rank.init -> void
+Semifreddo.TopoNodeInfo<N>.TopoNodeInfo() -> void
+Semifreddo.TopoNodeInfo<N>.TopoNodeInfo(N Node, long Rank, int Level, int PredecessorCount) -> void
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.Add(N node) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.Contains(N node) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.Count.get -> int
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.GetEnumerator() -> Semifreddo.TopoEnumerator<N, TSentinel>
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.Remove(N node) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.Replace(N oldNode, N newNode) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.Reset(TOrder source) -> void
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.ToPersistent() -> TOrder
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.TryAddEdge<TGraph>(TGraph graph, N from, N to) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out N[]? cycle) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out N[]? cycle) -> bool
+Semifreddo.TopoTransient<TSelf, TOrder, N, TSentinel, TEntry>.TryGetRank(N node, out long rank) -> bool
+Semifreddo.WithLevels
+Semifreddo.WithLevels.Level.get -> int
+Semifreddo.WithLevels.Level.set -> void
+Semifreddo.WithLevels.Rank.get -> uint
+Semifreddo.WithLevels.Rank.set -> void
+Semifreddo.WithLevels.WithLevels() -> void
+override Semifreddo.DagBatchOptions.GetHashCode() -> int
+override Semifreddo.DagCycleException<N>.Message.get -> string!
+override Semifreddo.DagNodeView<N, A, V>.GetHashCode() -> int
+override Semifreddo.NoPayload.GetHashCode() -> int
+override Semifreddo.Reclamation.RetiredNode<N, A, V>.GetHashCode() -> int
+override Semifreddo.TopoNodeInfo<N>.GetHashCode() -> int
+static Semifreddo.DagBatchOptions.operator !=(Semifreddo.DagBatchOptions left, Semifreddo.DagBatchOptions right) -> bool
+static Semifreddo.DagBatchOptions.operator ==(Semifreddo.DagBatchOptions left, Semifreddo.DagBatchOptions right) -> bool
+static Semifreddo.DagNodeView<N, A, V>.operator !=(Semifreddo.DagNodeView<N, A, V> left, Semifreddo.DagNodeView<N, A, V> right) -> bool
+static Semifreddo.DagNodeView<N, A, V>.operator ==(Semifreddo.DagNodeView<N, A, V> left, Semifreddo.DagNodeView<N, A, V> right) -> bool
+static Semifreddo.DefaultSentinel<N>.IsNone(N value) -> bool
+static Semifreddo.DefaultSentinel<N>.None.get -> N
+static Semifreddo.ImmDag.Create<N, A, V>() -> Semifreddo.ImmDag<N, A, V>
+static Semifreddo.ImmDag.Create<N, A>() -> Semifreddo.ImmDag<N, A, Semifreddo.NoPayload>
+static Semifreddo.ImmDag<N, A, V>.Empty.get -> Semifreddo.ImmDag<N, A, V>
+static Semifreddo.ImmFlexVector.Create<T>(System.ReadOnlySpan<T> items) -> Semifreddo.ImmFlexVector<T>
+static Semifreddo.ImmFlexVector.CreateRange<T>(System.Collections.Generic.IEnumerable<T>! items) -> Semifreddo.ImmFlexVector<T>
+static Semifreddo.ImmFlexVector.CreateTransient<T>() -> Semifreddo.ImmFlexVector<T>.Transient!
+static Semifreddo.ImmFlexVector<T>.Empty.get -> Semifreddo.ImmFlexVector<T>
+static Semifreddo.ImmFlexVector<T>.operator +(Semifreddo.ImmFlexVector<T> left, Semifreddo.ImmFlexVector<T> right) -> Semifreddo.ImmFlexVector<T>
+static Semifreddo.ImmInterlocked.Read<K, V>(ref readonly Semifreddo.ImmMap<K, V> location) -> Semifreddo.ImmMap<K, V>
+static Semifreddo.ImmInterlocked.Read<T>(ref readonly Semifreddo.ImmSet<T> location) -> Semifreddo.ImmSet<T>
+static Semifreddo.ImmInterlocked.Read<T>(ref readonly Semifreddo.ImmVector<T> location) -> Semifreddo.ImmVector<T>
+static Semifreddo.ImmInterlocked.Update<K, V, TArg>(ref Semifreddo.ImmMap<K, V> location, System.Func<Semifreddo.ImmMap<K, V>, TArg, Semifreddo.ImmMap<K, V>>! transformer, TArg arg) -> bool
+static Semifreddo.ImmInterlocked.Update<K, V, TArg>(ref Semifreddo.ImmOrderedMap<K, V> location, System.Func<Semifreddo.ImmOrderedMap<K, V>, TArg, Semifreddo.ImmOrderedMap<K, V>>! transformer, TArg arg) -> bool
+static Semifreddo.ImmInterlocked.Update<K, V>(ref Semifreddo.ImmMap<K, V> location, System.Func<Semifreddo.ImmMap<K, V>, Semifreddo.ImmMap<K, V>>! transformer) -> bool
+static Semifreddo.ImmInterlocked.Update<K, V>(ref Semifreddo.ImmOrderedMap<K, V> location, System.Func<Semifreddo.ImmOrderedMap<K, V>, Semifreddo.ImmOrderedMap<K, V>>! transformer) -> bool
+static Semifreddo.ImmInterlocked.Update<N, A, V, TArg>(ref Semifreddo.ImmDag<N, A, V> location, System.Func<Semifreddo.ImmDag<N, A, V>, TArg, Semifreddo.ImmDag<N, A, V>>! transformer, TArg arg) -> bool
+static Semifreddo.ImmInterlocked.Update<N, A, V>(ref Semifreddo.ImmDag<N, A, V> location, System.Func<Semifreddo.ImmDag<N, A, V>, Semifreddo.ImmDag<N, A, V>>! transformer) -> bool
+static Semifreddo.ImmInterlocked.Update<T, TArg>(ref Semifreddo.ImmFlexVector<T> location, System.Func<Semifreddo.ImmFlexVector<T>, TArg, Semifreddo.ImmFlexVector<T>>! transformer, TArg arg) -> bool
+static Semifreddo.ImmInterlocked.Update<T, TArg>(ref Semifreddo.ImmSet<T> location, System.Func<Semifreddo.ImmSet<T>, TArg, Semifreddo.ImmSet<T>>! transformer, TArg arg) -> bool
+static Semifreddo.ImmInterlocked.Update<T, TArg>(ref Semifreddo.ImmVector<T> location, System.Func<Semifreddo.ImmVector<T>, TArg, Semifreddo.ImmVector<T>>! transformer, TArg arg) -> bool
+static Semifreddo.ImmInterlocked.Update<T>(ref Semifreddo.ImmFlexVector<T> location, System.Func<Semifreddo.ImmFlexVector<T>, Semifreddo.ImmFlexVector<T>>! transformer) -> bool
+static Semifreddo.ImmInterlocked.Update<T>(ref Semifreddo.ImmSet<T> location, System.Func<Semifreddo.ImmSet<T>, Semifreddo.ImmSet<T>>! transformer) -> bool
+static Semifreddo.ImmInterlocked.Update<T>(ref Semifreddo.ImmVector<T> location, System.Func<Semifreddo.ImmVector<T>, Semifreddo.ImmVector<T>>! transformer) -> bool
+static Semifreddo.ImmLeveledPkTopoOrder.CreateWithDefaultSentinel<N>() -> Semifreddo.ImmLeveledPkTopoOrder<N, Semifreddo.DefaultSentinel<N>>
+static Semifreddo.ImmLeveledPkTopoOrder.CreateWithMinValueSentinel<N>() -> Semifreddo.ImmLeveledPkTopoOrder<N, Semifreddo.MinValueSentinel<N>>
+static Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>.Empty.get -> Semifreddo.ImmLeveledPkTopoOrder<N, TSentinel>
+static Semifreddo.ImmMap.Create<K, V>(System.ReadOnlySpan<System.Collections.Generic.KeyValuePair<K, V>> items) -> Semifreddo.ImmMap<K, V>
+static Semifreddo.ImmMap.CreateRange<K, V>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<K, V>>! items) -> Semifreddo.ImmMap<K, V>
+static Semifreddo.ImmMap.CreateTransient<K, V>() -> Semifreddo.ImmMap<K, V>.Transient!
+static Semifreddo.ImmMap<K, V>.Empty.get -> Semifreddo.ImmMap<K, V>
+static Semifreddo.ImmOrderedMap.CreateRange<K, V>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<K, V>>! items) -> Semifreddo.ImmOrderedMap<K, V>
+static Semifreddo.ImmOrderedMap.CreateTransient<K, V>() -> Semifreddo.ImmOrderedMap<K, V>.Transient!
+static Semifreddo.ImmOrderedMap<K, V>.Empty.get -> Semifreddo.ImmOrderedMap<K, V>
+static Semifreddo.ImmPkTopoOrder.CreateWithDefaultSentinel<N>() -> Semifreddo.ImmPkTopoOrder<N, Semifreddo.DefaultSentinel<N>>
+static Semifreddo.ImmPkTopoOrder.CreateWithMinValueSentinel<N>() -> Semifreddo.ImmPkTopoOrder<N, Semifreddo.MinValueSentinel<N>>
+static Semifreddo.ImmPkTopoOrder<N, TSentinel>.Empty.get -> Semifreddo.ImmPkTopoOrder<N, TSentinel>
+static Semifreddo.ImmSet.Create<T>(System.ReadOnlySpan<T> items) -> Semifreddo.ImmSet<T>
+static Semifreddo.ImmSet.CreateRange<T>(System.Collections.Generic.IEnumerable<T>! items) -> Semifreddo.ImmSet<T>
+static Semifreddo.ImmSet.CreateTransient<T>() -> Semifreddo.ImmSet<T>.Transient!
+static Semifreddo.ImmSet<T>.Empty.get -> Semifreddo.ImmSet<T>
+static Semifreddo.ImmVector.Create<T>(System.ReadOnlySpan<T> items) -> Semifreddo.ImmVector<T>
+static Semifreddo.ImmVector.CreateRange<T>(System.Collections.Generic.IEnumerable<T>! items) -> Semifreddo.ImmVector<T>
+static Semifreddo.ImmVector.CreateTransient<T>() -> Semifreddo.ImmVector<T>.Transient!
+static Semifreddo.ImmVector<T>.Empty.get -> Semifreddo.ImmVector<T>
+static Semifreddo.MinValueSentinel<N>.IsNone(N value) -> bool
+static Semifreddo.MinValueSentinel<N>.None.get -> N
+static Semifreddo.NoLevels.TracksLevels.get -> bool
+static Semifreddo.NoPayload.operator !=(Semifreddo.NoPayload left, Semifreddo.NoPayload right) -> bool
+static Semifreddo.NoPayload.operator ==(Semifreddo.NoPayload left, Semifreddo.NoPayload right) -> bool
+static Semifreddo.Reclamation.RetiredNode<N, A, V>.operator !=(Semifreddo.Reclamation.RetiredNode<N, A, V> left, Semifreddo.Reclamation.RetiredNode<N, A, V> right) -> bool
+static Semifreddo.Reclamation.RetiredNode<N, A, V>.operator ==(Semifreddo.Reclamation.RetiredNode<N, A, V> left, Semifreddo.Reclamation.RetiredNode<N, A, V> right) -> bool
+static Semifreddo.Reclamation.RetiringDag.Reclaim<N, A, V>(ref Semifreddo.Reclamation.RetiringDag<N, A, V> location, System.ReadOnlySpan<Semifreddo.Reclamation.RetiredNode<N, A, V>> candidates, System.Collections.Generic.List<Semifreddo.Reclamation.RetiredNode<N, A, V>>! reclaimed) -> bool
+static Semifreddo.Reclamation.RetiringDag.Update<N, A, V, TArg>(ref Semifreddo.Reclamation.RetiringDag<N, A, V> location, System.Func<Semifreddo.Reclamation.RetiringDag<N, A, V>, TArg, Semifreddo.Reclamation.RetiringDag<N, A, V>>! transformer, TArg arg) -> bool
+static Semifreddo.Reclamation.RetiringDag<N, A, V>.Empty.get -> Semifreddo.Reclamation.RetiringDag<N, A, V>
+static Semifreddo.TopoNodeInfo<N>.operator !=(Semifreddo.TopoNodeInfo<N> left, Semifreddo.TopoNodeInfo<N> right) -> bool
+static Semifreddo.TopoNodeInfo<N>.operator ==(Semifreddo.TopoNodeInfo<N> left, Semifreddo.TopoNodeInfo<N> right) -> bool
+static Semifreddo.WithLevels.TracksLevels.get -> bool
+~override Semifreddo.DagBatchOptions.Equals(object obj) -> bool
+~override Semifreddo.DagBatchOptions.ToString() -> string
+~override Semifreddo.DagNodeView<N, A, V>.Equals(object obj) -> bool
+~override Semifreddo.DagNodeView<N, A, V>.ToString() -> string
+~override Semifreddo.NoPayload.Equals(object obj) -> bool
+~override Semifreddo.NoPayload.ToString() -> string
+~override Semifreddo.Reclamation.RetiredNode<N, A, V>.Equals(object obj) -> bool
+~override Semifreddo.Reclamation.RetiredNode<N, A, V>.ToString() -> string
+~override Semifreddo.TopoNodeInfo<N>.Equals(object obj) -> bool
+~override Semifreddo.TopoNodeInfo<N>.ToString() -> string

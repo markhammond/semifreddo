@@ -1,0 +1,51 @@
+#nullable enable
+Semifreddo.Testing.Check
+Semifreddo.Testing.DifferentialHarness
+Semifreddo.Testing.DifferentialResult
+Semifreddo.Testing.DifferentialResult.AgreedFailures.get -> int
+Semifreddo.Testing.DifferentialResult.AgreedFailures.init -> void
+Semifreddo.Testing.DifferentialResult.AgreedSuccesses.get -> int
+Semifreddo.Testing.DifferentialResult.AgreedSuccesses.init -> void
+Semifreddo.Testing.DifferentialResult.Deconstruct(out int Steps, out int AgreedSuccesses, out int AgreedFailures) -> void
+Semifreddo.Testing.DifferentialResult.DifferentialResult() -> void
+Semifreddo.Testing.DifferentialResult.DifferentialResult(int Steps, int AgreedSuccesses, int AgreedFailures) -> void
+Semifreddo.Testing.DifferentialResult.Equals(Semifreddo.Testing.DifferentialResult other) -> bool
+Semifreddo.Testing.DifferentialResult.Steps.get -> int
+Semifreddo.Testing.DifferentialResult.Steps.init -> void
+Semifreddo.Testing.InvariantViolationException
+Semifreddo.Testing.InvariantViolationException.InvariantViolationException(string! message) -> void
+Semifreddo.Testing.KahnTopoOrder<N>
+Semifreddo.Testing.KahnTopoOrder<N>.Add(N node) -> Semifreddo.Testing.KahnTopoOrder<N>!
+Semifreddo.Testing.KahnTopoOrder<N>.Contains(N node) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.Count.get -> int
+Semifreddo.Testing.KahnTopoOrder<N>.GetEnumerator() -> System.Collections.Generic.IEnumerator<N>!
+Semifreddo.Testing.KahnTopoOrder<N>.IsSameAs(Semifreddo.Testing.KahnTopoOrder<N>! other) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.LevelCount.get -> int
+Semifreddo.Testing.KahnTopoOrder<N>.LevelWidth(int level) -> int
+Semifreddo.Testing.KahnTopoOrder<N>.Precedes(N a, N b) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.Remove(N node) -> Semifreddo.Testing.KahnTopoOrder<N>!
+Semifreddo.Testing.KahnTopoOrder<N>.Replace(N oldNode, N newNode) -> Semifreddo.Testing.KahnTopoOrder<N>!
+Semifreddo.Testing.KahnTopoOrder<N>.Tighten<TGraph>(TGraph graph) -> Semifreddo.Testing.KahnTopoOrder<N>!
+Semifreddo.Testing.KahnTopoOrder<N>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out Semifreddo.Testing.KahnTopoOrder<N>! result) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.TryAddEdge<TGraph>(TGraph graph, N from, N to, out Semifreddo.Testing.KahnTopoOrder<N>! result, out N[]? cycle) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out Semifreddo.Testing.KahnTopoOrder<N>! result) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.TryAddEdges<TGraph>(TGraph graph, System.ReadOnlySpan<(N From, N To)> edges, out Semifreddo.Testing.KahnTopoOrder<N>! result, out N[]? cycle) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.TryGetLevel(N node, out int level) -> bool
+Semifreddo.Testing.KahnTopoOrder<N>.TryGetRank(N node, out long rank) -> bool
+override Semifreddo.Testing.DifferentialResult.GetHashCode() -> int
+static Semifreddo.Testing.Check.Cycle<N, TGraph>(TGraph graph, System.ReadOnlySpan<N> cycle) -> void
+static Semifreddo.Testing.Check.Dag<N, A, V>(Semifreddo.ImmDag<N, A, V> dag) -> void
+static Semifreddo.Testing.Check.ExactLevels<N, TGraph>(TGraph graph, System.Collections.Generic.IEnumerable<N>! graphNodes) -> System.Collections.Generic.Dictionary<N, int>!
+static Semifreddo.Testing.Check.FlexVector<T>(Semifreddo.ImmFlexVector<T> vector) -> void
+static Semifreddo.Testing.Check.IsAcyclic<N, TGraph>(TGraph graph, System.Collections.Generic.IEnumerable<N>! graphNodes) -> bool
+static Semifreddo.Testing.Check.Levels<N, TOrder, TGraph>(TGraph graph, System.Collections.Generic.IEnumerable<N>! graphNodes, TOrder order, bool exact = false) -> void
+static Semifreddo.Testing.Check.Map<K, V>(Semifreddo.ImmMap<K, V> map) -> void
+static Semifreddo.Testing.Check.Set<T>(Semifreddo.ImmSet<T> set) -> void
+static Semifreddo.Testing.Check.TopologicalOrder<N, TGraph, TOrder>(TGraph graph, System.Collections.Generic.IEnumerable<N>! graphNodes, TOrder order) -> void
+static Semifreddo.Testing.DifferentialHarness.Run<TOrder>(TOrder start, int seed, int steps = 1500, int maxNodes = 150, System.Action<Semifreddo.ImmDag<int, int, Semifreddo.NoPayload>, TOrder>? check = null, System.Func<TOrder, Semifreddo.ImmDag<int, int, Semifreddo.NoPayload>, TOrder>? tighten = null, int validateEvery = 1) -> Semifreddo.Testing.DifferentialResult
+static Semifreddo.Testing.DifferentialHarness.RunLeveled<TOrder>(TOrder start, int seed, int steps = 1500, int maxNodes = 150, int validateEvery = 1) -> Semifreddo.Testing.DifferentialResult
+static Semifreddo.Testing.DifferentialResult.operator !=(Semifreddo.Testing.DifferentialResult left, Semifreddo.Testing.DifferentialResult right) -> bool
+static Semifreddo.Testing.DifferentialResult.operator ==(Semifreddo.Testing.DifferentialResult left, Semifreddo.Testing.DifferentialResult right) -> bool
+static Semifreddo.Testing.KahnTopoOrder<N>.Empty.get -> Semifreddo.Testing.KahnTopoOrder<N>!
+~override Semifreddo.Testing.DifferentialResult.Equals(object obj) -> bool
+~override Semifreddo.Testing.DifferentialResult.ToString() -> string

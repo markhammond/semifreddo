@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsAotCompatible>true</IsAotCompatible>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>Semifreddo</RootNamespace>
+    <!-- Inspect generator output under obj/<config>/<tfm>/generated. -->
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <IsPackable>true</IsPackable>
+    <PackageId>Semifreddo</PackageId>
+    <Description>Persistent (immutable, structurally shared) collections for .NET: vectors, RRB flex vectors, hash maps and sets, insertion-ordered maps, a persistent DAG with alternate keys and deferred reclamation of removed payloads, and incremental topological orders (Pearce–Kelly, leveled). Frozen collections are built once and read; Semifreddo collections are partially frozen: never changed in place, yet every change is a cheap new version that shares structure with the old. Transients for batch edits, ref-struct enumeration, AOT-compatible.</Description>
+    <PackageTags>immutable;persistent;collections;hamt;rrb-vector;dag;topological-sort;pearce-kelly;structural-sharing;memory-reclamation</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Semifreddo.Tests" />
+    <InternalsVisibleTo Include="Semifreddo.Bench" />
+    <InternalsVisibleTo Include="Semifreddo.Testing" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Semifreddo.Generators/Semifreddo.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

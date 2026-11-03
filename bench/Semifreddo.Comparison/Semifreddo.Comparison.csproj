@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Semifreddo against other persistent (immutable, structurally shared) collections for .NET: run time and memory
+       allocated per operation, with BenchmarkDotNet. See README.md. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>false</IsPackable>
+    <ServerGarbageCollector>false</ServerGarbageCollector>
+    <!-- Durable7 is not on NuGet: fetch-durable7.sh clones it, at a pinned commit, into external/. Without it, its
+         benchmarks are left out and the rest run as usual. -->
+    <Durable7Src>$(MSBuildThisFileDirectory)external/Durable7/src/CSharp/src/</Durable7Src>
+    <HasDurable7 Condition="Exists('$(Durable7Src)Durable7.Hamt/Durable7.Hamt.csproj')">true</HasDurable7>
+    <DefineConstants Condition="'$(HasDurable7)' == 'true'">$(DefineConstants);DURABLE7</DefineConstants>
+    <!-- Durable7's projects are outside the solution, so a solution build would unset the configuration for them and
+         build them in Debug, which BenchmarkDotNet refuses: pass this one's down instead. -->
+    <ShouldUnsetParentConfigurationAndPlatform>false</ShouldUnsetParentConfigurationAndPlatform>
+    <DefaultItemExcludes>$(DefaultItemExcludes);external/**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Semifreddo/Semifreddo.csproj" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.8" />
+    <PackageReference Include="LanguageExt.Core" Version="5.0.0-beta-78" />
+    <PackageReference Include="FSharpx.Collections" Version="3.1.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(HasDurable7)' == 'true'">
+    <ProjectReference Include="$(Durable7Src)Durable7.Hamt/Durable7.Hamt.csproj" />
+    <ProjectReference Include="$(Durable7Src)Durable7.FingerTree/Durable7.FingerTree.csproj" />
+  </ItemGroup>
+</Project>

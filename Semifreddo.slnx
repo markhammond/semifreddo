@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="src/Semifreddo/Semifreddo.csproj" />
+  <Project Path="src/Semifreddo.Generators/Semifreddo.Generators.csproj" />
+  <Project Path="src/Semifreddo.Testing/Semifreddo.Testing.csproj" />
+  <Project Path="tests/Semifreddo.Tests/Semifreddo.Tests.csproj" />
+  <Project Path="tests/Semifreddo.Conformance.Tests/Semifreddo.Conformance.Tests.csproj" />
+  <Project Path="tests/Semifreddo.Reclamation.Tests/Semifreddo.Reclamation.Tests.csproj" />
+  <Project Path="bench/Semifreddo.Bench/Semifreddo.Bench.csproj" />
+  <Project Path="bench/Semifreddo.Comparison/Semifreddo.Comparison.csproj" />
+  <Project Path="samples/ScopeDemo/ScopeDemo.csproj" />
+</Solution>

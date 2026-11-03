@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RootNamespace>Semifreddo.Testing</RootNamespace>
+    <!-- Test support for this repository only: not shipped, as it inspects Semifreddo's internals. -->
+    <IsPackable>false</IsPackable>
+    <Description>Test support for Semifreddo: a canonical Kahn topological-order oracle, invariant checkers for Semifreddo's persistent structures and topological orders, and a differential harness for ITopologicalOrder implementations. Test-framework agnostic: violations throw InvariantViolationException.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Semifreddo/Semifreddo.csproj" />
+  </ItemGroup>
+</Project>
