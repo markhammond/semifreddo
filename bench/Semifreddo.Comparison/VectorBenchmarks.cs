@@ -3,7 +3,6 @@ using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Configs;
 using FSharpx.Collections;
 using LanguageExt;
-using Semifreddo;
 #if DURABLE7
 using Durable7.FingerTree;
 #endif
