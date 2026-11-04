@@ -1,7 +1,6 @@
 using System.Runtime.InteropServices;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Configs;
-using Semifreddo;
 using Bcl = Semifreddo.Comparison.Dags.ImmutableDictionaryDag<long, long, long>;
 using Lex = Semifreddo.Comparison.Dags.HashMapDag<long, long, long>;
 using Order = Semifreddo.ImmPkTopoOrder<long, Semifreddo.MinValueSentinel<long>>;

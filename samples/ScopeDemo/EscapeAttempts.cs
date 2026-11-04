@@ -1,4 +1,5 @@
 // Each case must FAIL to compile. Built one at a time with -p:DefineConstants=CASE_n by verify-escape.sh.
+// ReSharper disable once RedundantUsingDirective
 using Semifreddo;
 
 static class EscapeAttempts

@@ -2,7 +2,6 @@ using System.Collections.Immutable;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Configs;
 using LanguageExt;
-using Semifreddo;
 using FxMap = FSharpx.Collections.PersistentHashMap<long, long>;
 #if DURABLE7
 using D7Map = Durable7.Hamt.PersistentHashMap<long, long>;

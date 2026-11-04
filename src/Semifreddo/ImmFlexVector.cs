@@ -648,5 +648,9 @@ public readonly struct ImmFlexVector<T> : IReadOnlyList<T>, IRefEnumerable<T, Im
         }
 
         public Enumerator GetEnumerator() => ToPersistent().GetEnumerator();
+
+        /// <summary>Walks the current contents without freezing them (<see cref="GetEnumerator"/> freezes, so the batch's
+        /// next edits copy paths). Valid only while this transient is not edited: owned nodes change in place.</summary>
+        internal Enumerator Peek() => new(_h);
     }
 }

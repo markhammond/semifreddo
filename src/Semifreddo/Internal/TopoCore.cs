@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Diagnostics.CodeAnalysis;
-using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Semifreddo.Internal;
@@ -493,23 +491,18 @@ internal readonly struct TopoCore<N, TSentinel, TEntry>
                 {
                     if (checkPending && _pending.Contains((x, w))) continue;
                     if (!TryPos(w, out var pw)) continue;
-                    if (pw == ub)
+                    if (pw < ub)
                     {
-                        if (!wantCycle) return false;
-                        var len = 3;                                // to ... x, from, to: count the chain, then fill it
-                        for (var c = x; !EqualityComparer<N>.Default.Equals(c, to); c = _parent[c]) len++;
-                        var path = new N[len];
-                        path[^1] = to;
-                        path[^2] = w;
-                        var at = len - 3;
-                        for (var c = x; ; c = _parent[c]) { path[at--] = c; if (EqualityComparer<N>.Default.Equals(c, to)) break; }
-                        cycle = path;
-                        return false;
+                        if (_visited.Add(w))
+                        {
+                            _parent[w] = x;
+                            _stack.Add((w, pw));
+                        }
                     }
-                    if (pw < ub && _visited.Add(w))
+                    else if (pw == ub)
                     {
-                        _parent[w] = x;
-                        _stack.Add((w, pw));
+                        if (wantCycle) cycle = CyclePath(to, x, w);
+                        return false;
                     }
                 }
             }
@@ -551,6 +544,21 @@ internal readonly struct TopoCore<N, TSentinel, TEntry>
             if (oldPos == newPos) return;
             _rank.GetValueRefOrAddDefault(node, out _).Rank = RankOf(newPos); // keeps the level
             _slots.ItemRef(newPos) = node;
+        }
+
+        /// <summary>The cycle to ... x, from, to, read back through <see cref="_parent"/>. Cold: only a refused edge
+        /// whose cycle the caller wants.</summary>
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private N[] CyclePath(N to, N x, N from)
+        {
+            var len = 3;                                // count the chain, then fill it
+            for (var c = x; !EqualityComparer<N>.Default.Equals(c, to); c = _parent[c]) len++;
+            var path = new N[len];
+            path[^1] = to;
+            path[^2] = from;
+            var at = len - 3;
+            for (var c = x; ; c = _parent[c]) { path[at--] = c; if (EqualityComparer<N>.Default.Equals(c, to)) break; }
+            return path;
         }
 
         // ------------------------------------------------------------------------------------- levels
@@ -616,9 +624,10 @@ internal readonly struct TopoCore<N, TSentinel, TEntry>
         internal void TightenCore<TGraph>(TGraph graph) where TGraph : IDagAdjacency<N>, allows ref struct
         {
             _widths.Clear();
-            for (var p = 0; p < _slots.Count; p++)
+            var slots = _slots.Peek();                      // leaf by leaf, no freeze: only _rank and _widths change below
+            while (slots.MoveNext())
             {
-                var n = _slots[p];
+                var n = slots.Current;
                 if (TSentinel.IsNone(n)) continue;
                 var level = 0;
                 foreach (var q in graph.Predecessors(n))
